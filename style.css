@@ -1,0 +1,91 @@
+
+body{
+    display: grid;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:"element1  element1  element1  element1"
+                        "element2  element2  element3  element3"
+                        "element4  element5  element5  element6"
+                        "element7  element8  element8  element9";
+    gap: 20px;
+}
+.container div{
+    background-color: rgb(147, 98, 193);
+    padding: 1em;
+}
+
+.container div:hover{
+    border: 2px solid  rgb(193, 98, 139); 
+}
+/*<=============================================== ELEMENTOS =============================================>*/
+.container .element1{
+    background-color: #D9D9D9;
+    grid-area: element1;
+}
+.container .element2{
+    background-color: #CBB4B4;
+    grid-area: element2;
+}
+.container .element3{
+    background-color: #888686;
+    grid-area: element3;
+}
+.container .element4{
+    background-color: #D0D0AE;
+    grid-area: element4;
+}
+.container .element5{
+    background-color: #C6E0DA;
+    grid-area: element5;
+}
+.container .element6{
+    background-color: #C6E0DA;
+    grid-area: element6;
+}
+.container .element7{
+    background-color: #B3AED0;
+    grid-area: element7;
+}
+.container .element8{
+    background-color: #D0AECB;
+    grid-area: element8;
+}
+.container .element9{
+    background-color: #FFB1E0;
+    grid-area: element9;
+}
+
+/* <============================================================TABLET=====================================================> */
+@media (max-width: 768px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "element1 element1"
+            "element2 element3"
+            "element4 element5"
+            "element6 element7"
+            "element8 element9";
+    }
+}
+/* <============================================================MOVIL============================================================> */
+@media (max-width: 480px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "element1"
+            "element2"
+            "element3"
+            "element4"
+            "element5"
+            "element6" 
+            "element7" 
+            "element8" 
+            "element9";
+    }
+}
+
